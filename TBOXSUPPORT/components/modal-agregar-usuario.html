@@ -1,0 +1,43 @@
+<div id="modal-overlay" class="modal-overlay hidden">
+  <div class="modal">
+    <button class="close-modal" id="closeModal">&times;</button>
+    <h2>Agregar Usuario</h2>
+
+    <div class="avatar-wrapper">
+      <img src="../img/Deku.jpeg" class="avatar-img" alt="Avatar" />
+      <label class="upload-icon">
+        <i class="fa-solid fa-camera"></i>
+        <input type="file" hidden />
+      </label>
+    </div>
+
+    <form class="form-add-user">
+      <label><i class="fa-solid fa-user"></i> Nombre Completo</label>
+      <input type="text" placeholder="Nombre Completo" />
+
+      <div class="form-row">
+        <div class="form-group">
+          <label><i class="fa-solid fa-user-shield"></i> Rol</label>
+          <select>
+            <option selected disabled>Seleccione el Rol</option>
+            <option>Admin</option>
+            <option>DevSupport</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label><i class="fa-solid fa-building"></i> Área</label>
+          <select>
+            <option selected disabled>Seleccione el Área</option>
+            <option>Soporte Técnico</option>
+            <option>Dessarrollo</option>
+          </select>
+        </div>
+      </div>
+
+      <label><i class="fa-solid fa-briefcase"></i> Cargo</label>
+      <input type="text" placeholder="Cargo" />
+
+      <button type="submit" class="btn-submit">Aceptar</button>
+    </form>
+  </div>
+</div>

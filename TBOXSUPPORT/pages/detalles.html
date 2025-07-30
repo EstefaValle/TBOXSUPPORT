@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TBOXSA | Detalles de Ticket</title>
+
+  <link rel="stylesheet" href="../assets/sidebar.css" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/detalles.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="sidebar-container"></div>
+
+  <div class="main-layout">
+    <header class="top-bar">
+      <button class="toggle-sidebar" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+      <div class="search-bar"><input type="text" placeholder="Buscar" /></div>
+      <div class="user-dropdown" id="userDropdown">
+        <div class="user-toggle" id="userToggle">
+          <img src="../img/zuko.jpg" alt="user"/>
+          <div class="info"><span>Hola, Zuko</span><small>tboxsupport@gmail.com</small></div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <button id="darkModeToggle"><i class="fa-solid fa-moon"></i> Modo Oscuro</button>
+          <button><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <main class="main detalles-main">
+        <nav class="breadcrumb">
+          <a href="tickets.html">Tickets</a> / Detalles de Ticket
+        </nav>
+
+        <!-- Contenedor principal -->
+        <div class="detalle-card">
+          <div class="detalle-header">
+            <h2>Orden de Trabajo</h2>
+          </div>
+          <hr class="header-divider"/>
+
+          <div class="detalle-info">
+            <div class="ticket-number">No. de Ticket : TS000020</div>
+          <hr class="header-divider"/>
+    
+
+          <div class="detalle-list">
+            <div><span class="label">Nivel de Importancia:</span><span class="priority alta">Alta</span></div>
+            <div><span class="label">Asunto:</span>Reparación de Impresoras</div>
+            <div><span class="label">Modelo de Equipo:</span>SAT 15T2‑U</div>
+            <div><span class="label">Descripción:</span>La impresora imprime con una línea blanca en medio de la factura</div>
+            <div><span class="label">Ingresado por:</span><img src="../img/Henry.jpg" class="avatar"/></div>
+            <div><span class="label">Asignado a:</span><img src="../img/alecz (1).jpg" class="avatar"/></div>
+            <div><span class="label">Ubicación en el Tablero:</span>Nuevo</div>
+            <div><span class="label">Fecha Máxima:</span><span class="due-date">Fecha Máx 2025‑06‑13</span></div>
+          </div>
+
+          <div class="detalle-actions">
+            <button class="btn">Escalar Ticket</button>
+            <button class="btn secondary">Solicitar Baja</button>
+            <button class="btn">Avanzar</button>
+          </div>
+
+          <hr class="actions-divider"/>
+
+          <!-- Sección de comentarios -->
+          <section class="comentarios-section">
+            <h3>Comentarios</h3>
+            <p class="no-msg">No hay mensajes para mostrar</p>
+            <input type="text" class="comentario-input" placeholder="Ingrese su comentario aquí"/>
+            <div class="comentarios-btns">
+              <button class="btn upload"><i class="fa-solid fa-upload"></i> Carga tu Imagen</button>
+              <button class="btn comment"><i class="fa-solid fa-comment-dots"></i> Comentar</button>
+            </div>
+          </section>
+        </div>
+      </main>
+      
+    </div>
+     <footer>COPYRIGHT © TBOXSA 2025</footer>
+  </div>
+
+  <!-- JS -->
+  <script src="../js/sidebar.js"></script>
+  <script>
+    fetch('../components/sidebar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('sidebar-container').innerHTML = html;
+        if (window.initSidebar) initSidebar();
+      });
+  </script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

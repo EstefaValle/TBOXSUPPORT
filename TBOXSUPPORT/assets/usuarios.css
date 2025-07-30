@@ -1,0 +1,143 @@
+/* Contenedor principal */
+.detalle-card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px 35px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 1100px;
+  margin: 20px auto 40px;
+}
+body.dark .detalle-card {
+  background: #131313;
+  color: #e0e0e0;
+}
+.detalle-card h2 {
+  margin-bottom: 20px;
+  font-style: medium;
+  font-size: 24px;
+  color: black;
+}
+
+/* Controles sobre la tabla */
+.table-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.dt-search {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
+  min-width: 200px;
+}
+.dt-search::placeholder {
+  color: #888;
+}
+
+.btn-container .dt-button {
+  background-color: #3C6034 !important;
+  color: white !important;
+  border: none;
+  border-radius: 6px !important;
+  padding: 6px 12px;
+  font-size: 14px;
+  margin-left: 4px;
+  box-shadow: none;
+  transition: background-color 0.3s ease;
+}
+.btn-container .dt-button:hover {
+  background-color: #33512b;
+}
+
+.btn-add-user {
+  background-color: #3C6034;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.btn-add-user:hover {
+  background-color: #33512b;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #c62828;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.switch input:checked + .slider {
+  background-color: #2e7d32;
+}
+.switch input:checked + .slider:before {
+  transform: translateX(21px);
+}
+
+body.dark .dt-search {
+  background-color: #333333;
+  border: black;
+}
+
+body.dark h2 {
+  color: white;
+}
+
+/* Responsive: Alineación en pantallas pequeñas */
+@media (max-width: 768px) {
+  .table-controls {
+    justify-content: center;
+  }
+  .dt-search {
+    margin-bottom: 8px;
+  }
+}

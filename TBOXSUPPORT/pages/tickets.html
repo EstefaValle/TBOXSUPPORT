@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TBOXSA | Tickets</title>
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="../assets/sidebar.css" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/tickets.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <div id="sidebar-container"></div>
+
+    <div class="main-layout">
+        <!-- TOP BAR -->
+        <header class="top-bar">
+            <button class="toggle-sidebar" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar ticket..." />
+            </div>
+
+            <div class="user-dropdown" id="userDropdown">
+                <div class="user-toggle" id="userToggle">
+                    <img src="../img/zuko.jpg" alt="user" />
+                    <div class="info">
+                        <strong>Hola, Zuko</strong>
+                        <small>tboxsupport@gmail.com</small>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <button id="darkModeToggle"><i class="fa-solid fa-moon"></i> Modo Oscuro</button>
+                    <button><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="main-content">
+            <main class="main">
+                <div class="tickets-nav">
+                    <button class="ticket-tab active" data-tab="Nuevo">Nuevo</button>
+                    <button class="ticket-tab" data-tab="En Proceso">En Proceso</button>
+                    <button class="ticket-tab" data-tab="Pendiente de Información">Pendiente de Información</button>
+                    <button class="ticket-tab" data-tab="Escalado">Escalado</button>
+                    <button class="ticket-tab" data-tab="Resuelto">Resuelto</button>
+                </div>
+
+                <section class="ticket-section">
+                    <div class="ticket-card" data-status="Nuevo">
+                        <h3 class="ticket-number">#TS000001</h3>
+                        <div class="ticket-header">
+                            <span class="priority alta">Alta</span>
+                            <span class="due-date">Fecha Máx: 2025-06-13</span>
+                        </div>
+                        <div class="ticket-info">
+                            <p><strong>Asunto:</strong> Problema de conexión</p>
+                        </div>
+                        <hr class="divider" />
+                        <div class="ticket-footer">
+                            <p><strong>Fecha de Creación:</strong> 2025-07-02</p>
+                            <i class="fa-solid fa-message"></i>
+                        </div>
+                        <div class="ticket-actions">
+                            <button>Ver Detalles</button>
+                        </div>
+                    </div>
+
+                    <div class="ticket-card" data-status="En Proceso">
+                        <h3 class="ticket-number">#TS000002</h3>
+                        <div class="ticket-header">
+                            <span class="priority media">Media</span>
+                            <span class="due-date">Fecha Máx: 2025-06-20</span>
+                        </div>
+                        <div class="ticket-info">
+                            <p><strong>Asunto:</strong> Error en módulo</p>
+                        </div>
+                        <hr class="divider" />
+                        <div class="ticket-footer">
+                            <p><strong>Fecha de Creación:</strong> 2025-07-01</p>
+                            <i class="fa-solid fa-message"></i>
+                        </div>
+                        <div class="ticket-actions">
+                            <button>Ver Detalles</button>
+                        </div>
+                    </div>
+
+                    <div class="ticket-card" data-status="Pendiente de Información">
+                        <h3 class="ticket-number">#TS000003</h3>
+                        <div class="ticket-header">
+                            <span class="priority media">Media</span>
+                            <span class="due-date">Fecha Máx: 2025-06-25</span>
+                        </div>
+                        <div class="ticket-info">
+                            <p><strong>Asunto:</strong> Esperando confirmación</p>
+                        </div>
+                        <hr class="divider" />
+                        <div class="ticket-footer">
+                            <p><strong>Fecha de Creación:</strong> 2025-06-30</p>
+                            <i class="fa-solid fa-message"></i>
+                        </div>
+                        <div class="ticket-actions">
+                            <button>Ver Detalles</button>
+                        </div>
+                    </div>
+
+                    <div class="ticket-card" data-status="Escalado">
+                        <h3 class="ticket-number">#TS000004</h3>
+                        <div class="ticket-header">
+                            <span class="priority alta">Alta</span>
+                            <span class="due-date">Fecha Máx: 2025-07-04</span>
+                        </div>
+                        <div class="ticket-info">
+                            <p><strong>Asunto:</strong> Escalado a nivel 2</p>
+                        </div>
+                        <hr class="divider" />
+                        <div class="ticket-footer">
+                            <p><strong>Fecha de Creación:</strong> 2025-07-01</p>
+                            <i class="fa-solid fa-message"></i>
+                        </div>
+                        <div class="ticket-actions">
+                            <button>Ver Detalles</button>
+                        </div>
+                    </div>
+
+                    <div class="ticket-card" data-status="Resuelto">
+                        <h3 class="ticket-number">#TS000005</h3>
+                        <div class="ticket-header">
+                            <span class="priority baja">Baja</span>
+                            <span class="due-date">Fecha Máx: 2025-07-05</span>
+                        </div>
+                        <div class="ticket-info">
+                            <p><strong>Asunto:</strong> Ticket cerrado exitosamente</p>
+                        </div>
+                        <hr class="divider" />
+                        <div class="ticket-footer">
+                            <p><strong>Fecha de Creación:</strong> 2025-06-29</p>
+                            <i class="fa-solid fa-message"></i>
+                        </div>
+                        <div class="ticket-actions">
+                            <button>Ver Detalles</button>
+                        </div>
+                    </div>
+
+                </section>
+            </main>
+        </div>
+
+        <footer>COPYRIGHT © TBOXSA 2025</footer>
+    </div>
+
+    <!-- JS -->
+    <script src="../js/sidebar.js"></script>
+    <script>
+        fetch('../components/sidebar.html')
+            .then(res => res.text())
+            .then(data => {
+                // reemplazar container con inyección directa al body
+                document.body.insertAdjacentHTML('afterbegin', data);
+            });
+    </script>
+    <script src="../js/script.js"></script>
+    <script src="../js/tickets.js"></script>
+</body>
+
+</html>

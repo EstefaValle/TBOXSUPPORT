@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TBOXSA Dashboard</title>
+
+  <!-- ESTILOS -->
+  <link rel="stylesheet" href="assets/sidebar.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div>
+      <div class="logo">
+        <img src="img/LOGO TBOXSA  Blanco.png" alt="logo" />
+      </div>
+      <nav>
+        <div class="section-title no-line">MENÚ</div>
+        <a href="index.html" class="sidebar-link active"><i class="fas fa-chart-pie"></i><span>Dashboard</span></a>
+        <a href="pages/tickets.html" class="sidebar-link"><i class="fas fa-ticket-alt"></i><span>Tickets</span></a>
+        <a href="#" class="sidebar-link"><i class="fas fa-history"></i><span>Historial</span></a>
+        <a href="#" class="sidebar-link"><i class="fas fa-plus-circle"></i><span>Asignar Ticket</span></a>
+
+        <div class="section-title">SEGUIMIENTO</div>
+        <a href="#" class="sidebar-link"><i class="fas fa-user"></i><span>Usuarios</span></a>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="main-layout">
+    <!-- TOP BAR -->
+    <header class="top-bar">
+      <button class="toggle-sidebar" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar..." />
+      </div>
+
+      <div class="user-dropdown" id="userDropdown">
+        <div class="user-toggle" id="userToggle">
+          <img src="img/zuko.jpg" alt="user" />
+          <div class="info">
+            <strong>Hola, Zuko</strong>
+            <small>tboxsupport@gmail.com</small>
+          </div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+
+        <div class="dropdown-menu" id="dropdownMenu">
+          <button id="darkModeToggle"><i class="fa-solid fa-moon"></i> Modo Oscuro</button>
+          <button><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="main-content">
+      <main class="main">
+        <div class="card">
+          <h3>Casos por Asignar</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Nuevo</th>
+                <th>En Proceso</th>
+                <th>Pendiente de Información</th>
+                <th>Escalado</th>
+                <th>Resuelto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2</td>
+                <td>4</td>
+                <td>10</td>
+                <td>0</td>
+                <td>10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h3>Casos Pendientes</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Usuarios</th>
+                <th>Nuevo</th>
+                <th>En Proceso</th>
+                <th>Pendiente de Información</th>
+                <th>Escalado</th>
+                <th>Resuelto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Dennis Alecz Mendoza</td><td>2</td><td>4</td><td>10</td><td>0</td><td>10</td></tr>
+              <tr><td>Roger Ponce</td><td>2</td><td>4</td><td>5</td><td>0</td><td>10</td></tr>
+              <tr><td>Carlos Guzman</td><td>10</td><td>4</td><td>10</td><td>2</td><td>10</td></tr>
+              <tr><td>Josué Alexander Padilla</td><td>2</td><td>3</td><td>10</td><td>0</td><td>10</td></tr>
+              <tr><td>Levi Ackerman</td><td>2</td><td>4</td><td>0</td><td>0</td><td>10</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+
+      <aside class="right-panel">
+        <div class="priority-chart">
+          <div class="priority-header">
+            <h4>Prioridad</h4>
+            <div class="priority-menu" id="exportMenu">
+              <i class="fa-solid fa-ellipsis-v"></i>
+              <div class="export-options">
+                <button id="exportPng">PNG</button>
+                <button id="exportJpg">JPG</button>
+              </div>
+            </div>
+          </div>
+          <div class="priority-body">
+            <div class="chart-container">
+              <div class="center-text" id="priorityCenter">30</div>
+              <canvas id="priorityChart"></canvas>
+            </div>
+            <ul class="legend-list">
+              <li><span class="dot red"></span> P1 <b id="valP1">10</b></li>
+              <li><span class="dot green"></span> P2 <b id="valP2">10</b></li>
+              <li><span class="dot yellow"></span> P3 <b id="valP3">10</b></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="stats">
+          <h3 style="text-align: center; margin-bottom: 15px;">Tickets Pendientes</h3>
+          <div class="stat-block"><span class="label">Tickets Pendientes</span><span class="value">20</span></div>
+          <div class="stat-block"><span class="label">Tickets Finalizados</span><span class="value">30</span></div>
+          <div style="margin-bottom: 15px;"><span class="label">Tickets del mes anterior</span><span class="value" style="font-weight: 600; font-size: 20px;">10</span></div>
+          <div><span class="label">Tickets del mes actual</span><span class="value" style="font-weight: 600; font-size: 20px;">40</span></div>
+        </div>
+
+        <div class="rating-box">
+          <h4>Opinión del Cliente</h4>
+          <div class="star-line"><span>Roger Ponce</span><div class="stars-css"><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i></div></div>
+          <div class="star-line"><span>Levi Ackerman</span><div class="stars-css"><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star"></i></div></div>
+          <div class="star-line"><span>Josué Padilla</span><div class="stars-css"><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+          <div class="star-line"><span>Dennis Alecz</span><div class="stars-css"><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+          <div class="star-line"><span>Carlos Guzman</span><div class="stars-css"><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>COPYRIGHT © TBOXSA 2025</footer>
+  </div>
+
+  <!-- LIBRERÍAS -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- JS -->
+  <script src="js/sidebar.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+.tickets-nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background-color: #f4f4f4;
+  padding: 18px;
+  border-radius: 50px;
+  margin: 30px auto 40px;
+  max-width: 900px;
+}
+
+.ticket-tab {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 25px;
+  color: #555;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.ticket-tab.active {
+  background-color: white;
+  color: #000;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.ticket-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 60px 60px;
+}
+
+.ticket-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  width: 450px;
+  display: none;
+}
+.ticket-card.active {
+  display: block;
+}
+
+.ticket-number {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.priority {
+  padding: 4px 12px;
+  border-radius: 12px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+.priority.alta {
+  background-color: #C01313;
+}
+.priority.media {
+  background-color: #E39910;
+}
+.priority.baja {
+  background-color: #408D2F;
+}
+
+.due-date {
+  font-size: 12px;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.ticket-info p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #efefef;
+  margin: 12px 0;
+}
+
+.ticket-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.ticket-footer i {
+  color: #2e7d32;
+}
+
+.ticket-actions {
+  text-align: center;
+  margin-top: 15px;
+}
+.ticket-actions button {
+  padding: 10px 24px;
+  background-color: #4d7c59;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.ticket-actions button:hover {
+  background-color: #3b6547;
+}
+
+/* Estilos generales de tickets y modo oscuro */
+body.dark .tickets-nav {
+  background-color: #2c2c2c;
+}
+body.dark .ticket-card {
+  background-color: #131313;
+  color: #e0e0e0;
+}
+body.dark .ticket-tab {
+  color: #ccc;
+}
+body.dark .ticket-tab.active {
+  background-color: black;
+  color: #fff;
+}
+body.dark .divider {
+  border-color: #333;
+}
+body.dark .priority.alta,
+body.dark .priority.media,
+body.dark .priority.baja {
+  color: #fff;
+}
+body.dark .ticket-footer p,
+body.dark .ticket-number {
+  color: #fff;
+}
+
+/* Navegación de pestañas */
+.tickets-nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background-color: #f4f4f4;
+  padding: 18px;
+  border-radius: 50px;
+  margin: 30px auto 40px;
+  max-width: 900px;
+}
+.ticket-tab {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 25px;
+  color: #555;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+.ticket-tab.active {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Sección de tarjetas */
+.ticket-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 60px 60px;
+}
+.ticket-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  width: 450px;
+  display: none;
+}
+.ticket-card.active {
+  display: block;
+}
+
+/* Número de ticket centrado */
+.ticket-number {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Encabezado con prioridad y fecha */
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.priority {
+  padding: 4px 12px;
+  border-radius: 12px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+.priority.alta {
+  background-color: #C01313;
+}
+.priority.media {
+  background-color: #E39910;
+}
+.priority.baja {
+  background-color: #408D2F;
+}
+.due-date {
+  font-size: 12px;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+/* Asunto */
+.ticket-info p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Línea divisoria */
+.divider {
+  border: none;
+  border-top: 1px solid #efefef;
+  margin: 12px 0;
+}
+
+/* Pie de tarjeta */
+.ticket-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.ticket-footer i {
+  color: #2e7d32;
+}
+
+/* Botón de acción */
+.ticket-actions {
+  text-align: center;
+  margin-top: 15px;
+}
+.ticket-actions button {
+  padding: 10px 24px;
+  background-color: #4d7c59;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.ticket-actions button:hover {
+  background-color: #3b6547;
+}
+
+@media (max-width: 768px) {
+  .tickets-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 20px;
+    max-width: 100%;
+    margin: 20px 15px 30px;
+  }
+
+  .ticket-tab {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .ticket-section {
+    padding: 0 15px 40px;
+  }
+
+  .ticket-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ticket-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .ticket-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .ticket-actions button {
+    width: 100%;
+  }
+}

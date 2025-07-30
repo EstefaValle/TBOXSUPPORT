@@ -1,0 +1,156 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.ticket-board {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.ticket-column-container {
+  flex: 1;
+  background-color: #DFDFDF;
+  padding: 1rem;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.column-title {
+  background-color: #3C6034;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 8px 8px 0 0;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.ticket-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  min-height: 100px;
+}
+
+.ticket-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 480px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.ticket-card p {
+  margin: 0.2rem 0;
+  font-size: 16px;
+  color: #333;
+  padding-left: 24px;
+}
+
+.ticket-card p:first-child {
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.ticket-card:active {
+  cursor: grabbing;
+}
+
+.ticket-card:hover {
+  transform: scale(1.02);
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btn-ver-detalles {
+  background-color: #215026;
+  color: white;
+  padding: 0.4rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn-asignar-ticket {
+  background-color: #6C8766;
+  color: white;
+  padding: 0.4rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn-asignar-ticket:hover {
+  background-color: #47613c;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: transparent;
+  color: #888;
+}
+
+/* 🌙 Modo oscuro */
+body.dark .ticket-column-container {
+  background-color: #2c2c2c;
+}
+
+body.dark .column-title {
+  background-color: #1C4320;
+  color: white;
+}
+
+body.dark .ticket-card {
+  background-color: #3a3a3a;
+  color: white;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .ticket-card p {
+  color: #f0f0f0;
+}
+
+body.dark .btn-ver-detalles {
+  background-color: #215026;
+}
+
+body.dark .btn-asignar-ticket {
+  background-color: #6C8766;
+}
+
+body.dark .btn-asignar-ticket:hover {
+  background-color: #47613c;
+}

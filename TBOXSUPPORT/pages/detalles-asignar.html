@@ -1,0 +1,110 @@
+<!-- detalles-asignar.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TBOXSA | Detalles de Ticket</title>
+    <link rel="stylesheet" href="../assets/sidebar.css" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/detalles-asignar.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div id="sidebar-container"></div>
+
+    <div class="main-layout">
+        <header class="top-bar">
+            <button class="toggle-sidebar" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+            <div class="search-bar"><input type="text" placeholder="Buscar" /></div>
+            <div class="user-dropdown" id="userDropdown">
+                <div class="user-toggle" id="userToggle">
+                    <img src="../img/zuko.jpg" alt="user" />
+                    <div class="info"><span>Hola, Zuko</span><small>tboxsupport@gmail.com</small></div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <button id="darkModeToggle"><i class="fa-solid fa-moon"></i> Modo Oscuro</button>
+                    <button><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <main class="main detalles-main">
+                <nav class="breadcrumb">
+                    <a href="asignar-ticket.html">Asignar Tickets</a> / Detalles de Ticket
+                </nav>
+
+                <div class="detalle-card">
+                    <div class="detalle-header">
+                        <h2>Orden de Trabajo</h2>
+                    </div>
+                    <hr class="header-divider" />
+
+                    <div class="detalle-info">
+                        <div class="ticket-number">No. de Ticket: <strong>TS000020</strong></div>
+                        <hr class="header-divider" />
+
+                        <div class="detalle-list">
+                            <div><span class="label">Cliente:</span> Josué Alexander Padilla</div>
+                            <div><span class="label">Empresa:</span> Típicos de la Costa</div>
+                            <div><span class="label">Categoría:</span> Dispositivo</div>
+                            <div><span class="label">Producto:</span> Kiosco</div>
+                            <div><span class="label">Modelo:</span> SAT KT21</div>
+                            <div><span class="label">Número de Serie:</span> TX154BN45</div>
+                            <div><span class="label">Descripción:</span> El kiosco no da video y aparece una línea en
+                                medio de la pantalla</div>
+                            <div><span class="label">Ingresado por:</span><img src="../img/Henry.jpg" class="avatar">
+                            </div>
+
+                            <h3 class="evidencia-title">Evidencia Adjuntada:</h3>
+
+                            <div class="carousel-container">
+                                <button class="carousel-btn prev">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </button>
+
+                                <div class="carousel-track">
+                                    <img src="../img/maqueta.jpeg" alt="Evidencia 1" />
+                                    <img src="../img/polvo.jpeg" alt="Evidencia 2" />
+                                    <img src="../img/minecra.jpeg" alt="Evidencia 3" />
+                                </div>
+
+                                <button class="carousel-btn next">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                            </div>
+
+                            <div class="ticket-buttons">
+                                <button class="btn volver">Volver</button>
+                                <button class="btn rechazar">Rechazar Ticket</button>
+                                <button class="btn avanzar">Avanzar</button>
+                            </div>
+
+                            <hr class="actions-divider" />
+                        </div>
+                    </div>
+            </main>
+        </div>
+        <footer>COPYRIGHT © TBOXSA 2025</footer>
+    </div>
+
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/detalles-asignar.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        fetch('../components/sidebar.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('sidebar-container').innerHTML = html;
+                if (window.initSidebar) initSidebar();
+            });
+    </script>
+</body>
+
+</html>

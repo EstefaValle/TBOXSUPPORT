@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TBOXSA | Usuarios</title>
+
+    <link rel="stylesheet" href="../assets/sidebar.css" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/modal-agregar-usuario.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css" />
+    <link rel="stylesheet" href="../assets/usuarios.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div id="sidebar-container"></div>
+
+    <div class="main-layout">
+
+        <header class="top-bar">
+            <button class="toggle-sidebar" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar ticket" />
+            </div>
+
+            <div class="user-dropdown" id="userDropdown">
+                <div class="user-toggle" id="userToggle">
+                    <img src="../img/zuko.jpg" alt="user" />
+                    <div class="info">
+                        <strong>Hola, Zuko</strong>
+                        <small>tboxsupport@gmail.com</small>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <button id="darkModeToggle"><i class="fa-solid fa-moon"></i> Modo Oscuro</button>
+                    <button><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <main class="main">
+                <div class="detalle-card">
+                    <h2>Usuarios</h2>
+                    <div class="table-controls">
+                        <button class="btn-add-user"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</button>
+                        <input type="search" id="custom-search" class="dt-search" placeholder="Buscar..." />
+                        <div id="dt-buttons" class="btn-container"></div>
+                    </div>
+
+                    <table id="usuarios-table" class="display stripe" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre Completo</th>
+                                <th>Rol</th>
+                                <th>Cargo</th>
+                                <th>Área</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="gradeX">
+                                <td>15460</td>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="../img/Henry.jpg" alt="Usuario" class="user-avatar">
+                                        Henry Argenis Paz
+                                    </div>
+                                </td>
+                                <td>Admin</td>
+                                <td>Gerente TI</td>
+                                <td>Dessarrollo</td>
+                                <td>Activo</td>
+                                <td>
+                                    <label class="switch">
+                                        <input type="checkbox" checked />
+                                        <span class="slider"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr class="gradeX">
+                                <td>15450</td>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="../img/alecz (1).jpg" alt="Usuario" class="user-avatar">
+                                        Denis Alecz Mendoza
+                                    </div>
+                                </td>
+                                <td>DevSupport</td>
+                                <td>QA Software</td>
+                                <td>Soporte Técnico</td>
+                                <td>Activo</td>
+                                <td>
+                                    <label class="switch">
+                                        <input type="checkbox" checked />
+                                        <span class="slider"></span>
+                                    </label>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+
+        <footer>COPYRIGHT © TBOXSA 2025</footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/sidebar.js"></script>
+    <script>
+        fetch('../components/sidebar.html')
+            .then(res => res.text())
+            .then(data => {
+                // reemplazar container con inyección directa al body
+                document.body.insertAdjacentHTML('afterbegin', data);
+            });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/usuarios.js"></script>
+    <script src="../js/modal-agregar-usuario.js" defer></script>
+</body>
+
+</html>

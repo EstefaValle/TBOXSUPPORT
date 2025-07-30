@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TBOXSA | Historial</title>
+
+  <link rel="stylesheet" href="../assets/sidebar.css" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/historial.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="sidebar-container"></div>
+
+  <div class="main-layout">
+    <header class="top-bar">
+      <button class="toggle-sidebar" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+      <div class="search-bar"><input type="text" placeholder="Buscar ticket..." /></div>
+      <div class="user-dropdown" id="userDropdown">
+        <div class="user-toggle" id="userToggle">
+          <img src="../img/zuko.jpg" alt="user" />
+          <div class="info"><strong>Hola, Zuko</strong><small>tboxsupport@gmail.com</small></div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <button id="darkModeToggle"><i class="fa-solid fa-moon"></i> Modo Oscuro</button>
+          <button><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <main class="main">
+        <div class="detalle-card">
+          <h2>Historial</h2>
+          <div class="table-controls">
+            <input type="search" id="custom-search" class="dt-search" placeholder="Buscar..." />
+            <div id="dt-buttons" class="btn-container"></div>
+          </div>
+
+          <table id="historial-table" class="display stripe" style="width:100%">
+            <thead>
+              <tr>
+                <th>No. de Ticket</th>
+                <th>Asunto</th>
+                <th>Cliente</th>
+                <th>Empresa</th>
+                <th>Técnico Asignado</th>
+                <th>Prioridad</th>
+                <th>Posición</th>
+                <th>Fecha de Creación</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="gradeX">
+                <td>1</td>
+                <td>Problema de conexión</td>
+                <td>Tito</td>
+                <td>TBOXSA</td>
+                <td>Zuko</td>
+                <td>Alta</td>
+                <td>Nuevo</td>
+                <td>2025-07-02</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+
+    <footer>COPYRIGHT © TBOXSA 2025</footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../js/sidebar.js"></script>
+ <script>
+        fetch('../components/sidebar.html')
+            .then(res => res.text())
+            .then(data => {
+                // reemplazar container con inyección directa al body
+                document.body.insertAdjacentHTML('afterbegin', data);
+            });
+    </script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/historial.js"></script>
+</body>
+
+</html>
