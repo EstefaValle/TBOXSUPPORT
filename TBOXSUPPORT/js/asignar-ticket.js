@@ -76,3 +76,9 @@ document.querySelectorAll('.btn-ver-detalles').forEach(button => {
     window.location.assign('./detalles-asignar.html');
   });
 });
+
+document.querySelectorAll('.btn-asignar-ticket').forEach(button => {
+  button.addEventListener('click', () => {
+    window.location.assign('./asignar-devsupport.html');
+  });
+});
